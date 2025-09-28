@@ -8,22 +8,22 @@ N="\e[0m"
 
 LOGS_FOLDER="/var/log/shell-roboshop"
 SCRIPT_NAME=$( echo $0 | cut -d "." -f1 )
-LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log" # /var/log/shell-script/16-logs.log
+LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log" # /var/log/shell-script/16-logs.logl-script/16-logs.log
 
 mkdir -p $LOGS_FOLDER
-echo "Script started executed at: $(date)" | tee -a $LOG_FILE
+echo "Script started executed at: $(date)" | tee -a $LOG_FILE_FILE
 
 if [ $USERID -ne 0 ]; then
-    echo "ERROR:: Please run this script with root privelege"
+    echo "ERROR:: Please run this script with root privelege"lege"
     exit 1 # failure is other than 0
 fi
 
-VALIDATE(){ # functions receive inputs through args just like shell script args
+VALIDATE(){ # functions receive inputs through args just like shell script args like shell script args
     if [ $1 -ne 0 ]; then
-        echo -e "$2 ... $R FAILURE $N" | tee -a $LOG_FILE
+        echo -e "$2 ... $R FAILURE $N" | tee -a $LOG_FILEE
         exit 1
     else
-        echo -e "$2 ... $G SUCCESS $N" | tee -a $LOG_FILE
+        echo -e "$2 ... $G SUCCESS $N" | tee -a $LOG_FILEE
     fi
 }
 
